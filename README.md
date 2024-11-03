@@ -18,10 +18,10 @@ More Tips and Tricks can be found [here](https://github.com/An0nUD4Y/Evilginx2-P
 Buy a domain(NameCheap has cheap domains). Transfer domain to your VPC provider. Create "A" record. 
 
 ### NameCheap domain transfer
->>>
-
+![NameCheap](NameCheap-Domain.png)
 ### DigitalOcean DNS Records
->>>
+![DigitalOcean](DigitalOcean-DNS.png)
+
 ### DNS Records
 
 Configure your DNS records as follows:
