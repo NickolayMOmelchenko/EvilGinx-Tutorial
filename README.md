@@ -3,14 +3,6 @@
 EvilGinx is a man-in-the-middle attack framework designed to capture credentials and session cookies from users interacting with phishing sites. This tool can be used for penetration testing and security assessments, allowing security professionals to simulate phishing attacks and understand the techniques attackers might employ.
 Official Documentation can be found [here](https://help.evilginx.com/docs/intro)
 
-### Protecting Against Phishing Attacks
-
-To learn how web developers can protect against MFA phishing attacks and the use of Evilginx, watch this video: [How Web Developers Can Protect Websites](https://www.youtube.com/watch?v=C-Fh4sIdY8c).
-
-### Creating Phishlets
-
-For guidance on creating phishlets for MFA bypass, refer to this resource: [Creating Phishlets](https://research.aurainfosec.io/pentest/hook-line-and-phishlet/).
-
 ## Usage
 
 **IMPORTANT!** Make sure that there is no service listening on ports `TCP 443`, `TCP 80` and `UDP 53`. You may need to shut down Apache or Nginx and any service used for resolving DNS that may be running. **evilginx2** will notify you on launch if it fails to open a listening socket on any of these ports.
@@ -167,7 +159,7 @@ Linux: /etc/hosts
 Windows: %WINDIR%\System32\drivers\etc\hosts
 Remember to enable your phishlet and you can start using Evilginx locally (can be useful for demos too!).
 
-    ```bash
+```bash
     # create self-signed cert
     openssl req -x509 -newkey rsa:2048 -keyout *.identity-access.online -out *.identity-access.online.crt -days 365 -nodes
     mv *.identity-access.online.crt /phishlets
@@ -176,4 +168,14 @@ Remember to enable your phishlet and you can start using Evilginx locally (can b
     ./evilginx -developer
     config autocert off
     test-certs
-    ```
+```
+
+### Protecting Against Phishing Attacks
+
+To learn how web developers can protect against MFA phishing attacks and the use of Evilginx, watch this video: [How Web Developers Can Protect Websites](https://www.youtube.com/watch?v=C-Fh4sIdY8c).
+
+### Creating Phishlets
+
+For guidance on creating phishlets for MFA bypass, refer to this resource: [Creating Phishlets](https://research.aurainfosec.io/pentest/hook-line-and-phishlet/).
+
+
